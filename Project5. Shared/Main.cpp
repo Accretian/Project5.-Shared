@@ -34,13 +34,18 @@ int main() {
         days = 31;
     }
 
-
+    for (int i = 1; i < 13; i++) {
+        year = 2000;
+        month = i;
+        std::cout << "month: " + month << "year: " + year + '\n';
+        std::cout << "Days: " + days + '\n';
+    }
 
 
     std::cout << days;
 
 
-
+    std::cin >> month;
 
 
 
