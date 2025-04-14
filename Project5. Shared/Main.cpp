@@ -27,25 +27,24 @@ int main() {
         }
         else days = 28;
     }
-    else if ((month % 2) == 0) {
-        days = 30;
+    else if (month < 8) {
+        if ((month % 2) == 0) {
+            days = 30;
+        }
+        else days = 31;
     }
-    else if ((month % 2) == 1) {
+    else if ((month % 2) == 0) {
         days = 31;
     }
+    else days = 30;
 
-    for (int i = 1; i < 13; i++) {
-        year = 2000;
-        month = i;
-        std::cout << "month: " + month << "year: " + year + '\n';
-        std::cout << "Days: " + days + '\n';
-    }
+
 
 
     std::cout << days;
 
 
-    std::cin >> month;
+
 
 
 
