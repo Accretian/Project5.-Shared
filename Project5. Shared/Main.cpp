@@ -7,16 +7,19 @@ int main() {
 
 	std::cin >> weekDay >> daysCount;
 
-	
 
-	for (int i = 1; i <= daysCount; i++) {
+
+	for (int i = 1; i <= daysCount;) {
 		for (int j = 1; j <= 7; j++) {
-			std::cout << '\t';
-			if ((j == weekDay) && (i <= daysCount)) {
-				std::cout << i;
-				i++;
-				weekDay++;
+			if (j == weekDay) {
+				if (i <= daysCount) {
+					std::cout << i << '\t';
+					i++;
+					weekDay++;
+				}
 			}
+			else
+				std::cout << '\t';
 		}
 		weekDay = 1;
 		std::cout << '\n';
