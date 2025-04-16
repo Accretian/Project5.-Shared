@@ -1,52 +1,32 @@
 #include <iostream>
+#include <string>
 
 int main() {
 
-	int weekDay = 0;
-	int daysCount = 0;
+    int classcount = 0;
+    std::string str;
+    std::cin >> str;
 
-	std::cin >> weekDay >> daysCount;
-
-	for (int i = 1; i <= daysCount;) {
-		for (int j = 1; j <= 7; j++) {
-			if (j == weekDay) {
-				if (i <= daysCount) {
-					if (i < 10)
-						std::cout << " ";
-					std::cout << i;
-					if (j < 7) {
-						std::cout << " ";
-					}
-					i++;
-					weekDay++;
-				}
-			}
-			else
-				std::cout << "   ";
-		}
-		weekDay = 1;
-		std::cout << '\n';
+    if (str.size() > 8 && str.size() < 15) {
+        for (char ch : str) {
+            if ((ch > 33 && ch < 48) || (ch > 57 && ch < 65) ||
+                (ch > 90 && ch < 97) || (ch > 122 && ch < 127))
+                classcount++;
+            if (ch > 47 && ch < 58)
+                classcount++;
+            if (ch > 64 && ch < 91)
+                classcount++;
+            if (ch > 96 && ch < 123)
+                classcount++;
+        }
 
 
+    }
 
+    std::string out = "Undefined.";
 
+    out = (classcount > 2) ? "YES" : "NO";
 
-
-	}
-
-
-
-
-
-
-
-
-
-	int dontCloseThisProgram;
-
-	std::cin >> dontCloseThisProgram;
-
-
-
+    std::cout << out;
 
 }
