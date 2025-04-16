@@ -29,4 +29,9 @@ int main() {
 
     std::cout << out;
 
+
+
+
+    std::cin >> out;
+
 }
