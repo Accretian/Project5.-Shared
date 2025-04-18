@@ -41,27 +41,22 @@ int main() {
 
 	std::replace(strin.begin(), strin.end(), 'r', '6');
 
+	if (strin.length() != 0)
+		out.append(strin.substr(0, 1));
 
-	//Ошибка.    "xddxxdxdxdxdxdx", "xxxxxxdxxxxxxxxxxxxxxxxx"  
-	for (int i = 0; i < ((int)strin.length() - 1); i++) {
-		while (i < (int)strin.length() && strin[i] == strin[i + 1])
-			strin.erase(i, i + 1);
+	for (char ch : strin) {
+		if (ch != out.back())
+			out.push_back(ch);
 	}
 
-	out.append(strin);
-
 	while (out.length() < 4) {
-		out.append("0");
+		out.push_back('0');
 	}
 
 	if (out.length() > 4)
 		out = out.substr(0, 4);
 
 	std::cout << out;
-
-
-
-	std::cin >> out;
 
 
 }
