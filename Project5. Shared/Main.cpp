@@ -17,7 +17,7 @@ int main() {
 
 	//Добавить в важные txt. aaaaammonium to mmnm
 	strin.erase(std::remove_if(strin.begin(), strin.end(), [](char chr) {return chr == 'a' || chr == 'e' || chr == 'h' || chr == 'i' ||
-		chr == 'o' || chr == 'u' || chr == 'w' || chr == 'y';}), strin.end());
+																				chr == 'o' || chr == 'u' || chr == 'w' || chr == 'y';}), strin.end());
 
 	for (char ch : {'b', 'f', 'p', 'v'}) {
 		std::replace(strin.begin(), strin.end(), ch, '1');
